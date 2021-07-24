@@ -1,0 +1,125 @@
+body{
+    display: block;
+}
+html{
+    scroll-behavior: smooth;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 0.8em; 
+}
+.pic1, .pic2, .pic3, .pic4 {
+    position: relative;
+    opacity: 0.75;
+    /* background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+}
+
+
+/* pic1 */
+.pic1{
+    background: url(img/mountainbeauty.jpg) no-repeat center center/cover;
+    min-height: 100%;
+    background-attachment: fixed;
+}
+.ptext {
+    line-height: 1.6em;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.ptext .border {
+    background-color: cornsilk;
+    color: darkmagenta;
+    padding: 15px 7px;
+}
+
+/* pic2 */
+.pic2{
+    background: url(img/hillsriver.jpg) no-repeat center center/cover;
+    min-height: 400px;
+    background-attachment: fixed;
+}
+.ptext .border.trans {
+    background-color: transparent;
+    color: black;
+}
+
+/* pic3 */
+.pic3{
+    background: url(img/cloud.jpg) no-repeat center center/cover;
+    min-height: 400px;
+    background-attachment: fixed;
+}
+
+/* pic4 */
+.pic4{
+    background: url(img/beautyhill.jpg) no-repeat bottom center/cover;
+    min-height: 100%;
+    background-attachment: fixed;
+}
+
+
+/* Section */
+section{
+    text-align: center;
+    padding: 40px 80px;
+    line-height: 1.9em;
+}
+
+/* section-one */
+.section1_light{
+    background-color: gainsboro;
+    color: black;
+}
+
+/* Section-two */
+.section2_dark{
+    background-color: #282e34;
+    color: whitesmoke;
+}
+
+/* section- Gallery */
+:before, :after {
+    box-sizing: inherit;
+}
+.gallery{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) );
+}
+.gallery h1{
+    font-family: "Lato", sans-serif;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+.gallery h1:before, .gallery h1:after {
+    display: block;
+    content: '';
+    height: 18px;
+    background: linear-gradient(to var(--direction, left), rgb(198 17 17), #e1bc2dcf);
+}
+.gallery h1:after {
+    --direction: right;
+}
+.gallery img {
+    height: 100%;
+    width: 100%;
+}
+img {
+    max-width: 100%;
+}
+
